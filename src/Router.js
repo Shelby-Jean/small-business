@@ -1,11 +1,9 @@
 import { Switch, Route, Redirect } from 'react-router';
 import cookie from 'cookie';
 import Login from './components/Login';
-import Listings from './components/Listings';
+import Listings from './containers/Listings';
 import Details from './components/Details';
 import Add from './components/Add';
-import { Component } from 'react';
-
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
