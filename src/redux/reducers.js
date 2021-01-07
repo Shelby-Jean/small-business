@@ -1,4 +1,16 @@
 import { combineReducers } from 'redux';
+import initialState from './state';
+
+const loggedIn = (state = initialState, action) => {
+  switch (action.type) {
+    case "LOG_IN":
+      return true;
+    case "LOG_OUT":
+      return false;
+    default:
+      return state;
+  }
+}
 
 const user = (state = null) => state
 
@@ -15,4 +27,4 @@ const businesses = (state = [], action) => {
   }
 }
 
-export default combineReducers({ user, businesses })
+export default combineReducers({ loggedIn, user, businesses })

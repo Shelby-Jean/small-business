@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <AppBar position="relative">
+    <AppBar color="primary" position="relative">
       <Toolbar>
-        <Typography variant="h6">Charlotte Small Business</Typography>
+        <h3 style={{ flexGrow: "1" }}>Charlotte Small Business</h3>
         <ul className="nav-list">
           <li className="nav-item">
             <Link to="/listings">Listings</Link>
           </li>
-          <li className="nav-list-item"
+          <li className="nav-item"
               onClick={() => {
                 document.cookie = "loggedIn="
                 window.location.replace("/login")

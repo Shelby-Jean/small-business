@@ -2,7 +2,7 @@ import { Switch, Route, Redirect } from 'react-router';
 import cookie from 'cookie';
 import Login from './components/Login';
 import Listings from './containers/Listings';
-import Details from './components/Details';
+import Details from './containers/Details';
 import Add from './components/Add';
 
 const checkAuth = () => {
@@ -27,7 +27,7 @@ const Router = () => {
     <Switch>
       <Route path='/login' component={Login} />
       <Route path='/listings' component={Listings} />
-      <Route path='/details' component={Details} />
+      <Route path='/details/:id' component={Details} />
       <ProtectedRoute path='/add' component={Add} />
     </Switch>
   )

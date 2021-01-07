@@ -7,10 +7,6 @@ a {
   color: inherit;
 }
 
-ul {
-  padding-inline-start: 20px;
-}
-
 .login-form {
   display: flex;
   flex-direction: column;

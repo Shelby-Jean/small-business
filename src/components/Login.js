@@ -6,14 +6,14 @@ class Login extends React.Component {
   login = (e) => {
     e.preventDefault()
     document.cookie = "loggedIn=true;max-age=60*1000";
-    // window.location.replace("/")
+    window.location.replace("/listings")
   }
   
   render() {
     return (
       <div>
         <Container maxWidth="md">
-          <form className="login-form" on Submit={this.login}>
+          <form className="login-form" onSubmit={this.login}>
             <TextField 
               required
               label="Username"
