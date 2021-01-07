@@ -24,6 +24,7 @@ class Login extends React.Component {
               label="Password"
               type="password"
             />
+            <br />
             <Button
               type="submit"
               variant="contained"

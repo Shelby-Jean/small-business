@@ -1,10 +1,10 @@
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
     <AppBar color="primary" position="relative">
-      <Toolbar>
+      <Toolbar color="contrastText">
         <h3 style={{ flexGrow: "1" }}>Charlotte Small Business</h3>
         <ul className="nav-list">
           <li className="nav-item">

@@ -1,17 +1,10 @@
-/* .App {
-  text-align: center;
+/* body {
+  color: #212121;
 } */
 
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  margin: 50px auto;
-  width: 50%;
 }
 
 .nav-list {
@@ -21,4 +14,17 @@ a {
 
 .nav-item {
   margin: auto 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 50%;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }

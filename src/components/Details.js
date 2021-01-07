@@ -6,7 +6,7 @@ const Details = (props) => {
 
   return (
     <div>
-      <Container maxWidth="sm">
+      <Container maxWidth="xs">
         <h2>{filteredBusiness.name}</h2>
         <h4>{filteredBusiness.address}</h4>
         <h4>{filteredBusiness.hours}</h4>
