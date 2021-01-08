@@ -1,6 +1,6 @@
 import { Switch, Route, Redirect } from 'react-router';
 import cookie from 'cookie';
-import Login from './components/Login';
+import Login from './containers/Login';
 import Listings from './containers/Listings';
 import Details from './containers/Details';
 import Add from './components/Add';

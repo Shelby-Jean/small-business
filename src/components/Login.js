@@ -2,11 +2,13 @@ import React from 'react';
 import { TextField, Button, Container } from '@material-ui/core';
 
 class Login extends React.Component {
-  
+  //usehistory hooks
+
   login = (e) => {
     e.preventDefault()
     document.cookie = "loggedIn=true;max-age=60*1000";
-    window.location.replace("/listings")
+    // window.location.replace("/listings")
+    this.props.logIn();
   }
   
   render() {

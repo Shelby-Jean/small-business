@@ -1,13 +1,25 @@
-export const addBusiness = (business) => {
+export const logIn = () => {
   return {
-    type: "ADD_BUSINESS",
-    value: business
+    type: "LOG_IN"
   }
 }
 
-export const removeBusiness = (index) => {
+export const logOut = () => {
   return {
-    type: "REMOVE_BUSINESS",
+    type: "LOG_OUT"
+  }
+}
+
+export const addListing = (listing) => {
+  return {
+    type: "ADD_LISTING",
+    value: listing
+  }
+}
+
+export const removeListing = (index) => {
+  return {
+    type: "REMOVE_LISTING",
     value: index
   }
 }

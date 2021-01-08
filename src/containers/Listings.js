@@ -3,7 +3,7 @@ import Listings from '../components/Listings';
 
 const mapStateToProps = (state) => {
   return {
-    businesses: state.businesses
+    listings: state.listings
   }
 }
 

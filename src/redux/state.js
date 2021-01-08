@@ -1,10 +1,10 @@
 export default {
-  loggedIn: false,
+  isLoggedIn: false,
   user: {
     username: "",
-    email: ""
+    password: ""
   },
-  businesses: [
+  listings: [
     {
       "id": 1,
       "name": "Undercurrent Coffee",
@@ -40,5 +40,8 @@ export default {
       "hours": "11AM - 9:30PM",
       "address": "2230 Park Rd #101, Charlotte, NC 28203"
     }
-  ]
+  ],
+  map: {
+
+  }
 };

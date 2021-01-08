@@ -15,14 +15,14 @@ const Listings = (props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {props.businesses.map(business => (
-              <TableRow key={business.id}>
+            {props.listings.map(listing => (
+              <TableRow key={listing.id}>
                 <TableCell>
-                  <Link to={`/details/${business.id}`}>{business.name}</Link>
+                  <Link to={`/details/${listing.id}`}>{listing.name}</Link>
                 </TableCell>
-                <TableCell>{business.description}</TableCell>
-                <TableCell>{business.hours}</TableCell>
-                <TableCell>{business.address}</TableCell>
+                <TableCell>{listing.description}</TableCell>
+                <TableCell>{listing.hours}</TableCell>
+                <TableCell>{listing.address}</TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -2,15 +2,15 @@ import { Container } from '@material-ui/core';
 
 const Details = (props) => {
   const id = props.match.params.id;
-  const filteredBusiness = props.businesses.find(business => business.id == id);
+  const filteredListing = props.listings.find(listing => listing.id == id);
 
   return (
     <div>
       <Container maxWidth="xs">
-        <h2>{filteredBusiness.name}</h2>
-        <h4>{filteredBusiness.address}</h4>
-        <h4>{filteredBusiness.hours}</h4>
-        <p>{filteredBusiness.description}</p>
+        <h2>{filteredListing.name}</h2>
+        <h4>{filteredListing.address}</h4>
+        <h4>{filteredListing.hours}</h4>
+        <p>{filteredListing.description}</p>
       </Container>
     </div>
   )

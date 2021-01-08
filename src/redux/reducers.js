@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
-import initialState from './state';
 
-const loggedIn = (state = initialState, action) => {
+const isLoggedIn = (state = false, action) => {
   switch (action.type) {
     case "LOG_IN":
       return true;
@@ -14,11 +13,11 @@ const loggedIn = (state = initialState, action) => {
 
 const user = (state = null) => state
 
-const businesses = (state = [], action) => {
+const listings = (state = [], action) => {
   switch (action.type) {
-    case "ADD_BUSINESS":
+    case "ADD_LISTING":
       return [...state, action.value];
-    case "REMOVE_BUSINESS":
+    case "REMOVE_LISTING":
       const newState = [...state];
       newState.splice(action.value, 1);
       return newState;
@@ -27,4 +26,4 @@ const businesses = (state = [], action) => {
   }
 }
 
-export default combineReducers({ loggedIn, user, businesses })
+export default combineReducers({ isLoggedIn, user, listings })
