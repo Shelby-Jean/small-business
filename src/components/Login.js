@@ -1,43 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TextField, Button, Container } from '@material-ui/core';
+import { useHistory } from "react-router-dom";
 
-class Login extends React.Component {
-  //usehistory hooks
+const Login = (props) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  login = (e) => {
+  let history = useHistory();
+
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+  }
+
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const login = (e) => {
     e.preventDefault()
     document.cookie = "loggedIn=true;max-age=60*1000";
     // window.location.replace("/listings")
-    this.props.logIn();
+    props.logIn();
+    history.push("/listings");
   }
   
-  render() {
-    return (
-      <div>
-        <Container maxWidth="md">
-          <form className="login-form" onSubmit={this.login}>
-            <TextField 
-              required
-              label="Username"
-              type="text"
-            />
-            <TextField 
-              required
-              label="Password"
-              type="password"
-            />
-            <br />
-            <Button
-              type="submit"
-              variant="contained"
-            >
-              Login
-            </Button>
-          </form>
-        </Container>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Container maxWidth="md">
+        <form className="login-form" onSubmit={login}>
+          <TextField 
+            required
+            label="Username"
+            type="text"
+            value={username}
+            onChange={handleUsername}
+          />
+          <TextField 
+            required
+            label="Password"
+            type="password"
+            value={password}
+            onChange={handlePassword}
+          />
+          <br />
+          <Button
+            type="submit"
+            variant="contained"
+          >
+            Login
+          </Button>
+        </form>
+      </Container>
+    </div>
+  )
 }
 
 export default Login;
