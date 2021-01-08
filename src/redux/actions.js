@@ -10,6 +10,13 @@ export const logOut = () => {
   }
 }
 
+export const setUser = (user) => {
+  return {
+    type: "SET_USER",
+    value: user
+  }
+}
+
 export const addListing = (listing) => {
   return {
     type: "ADD_LISTING",

@@ -11,7 +11,14 @@ const isLoggedIn = (state = false, action) => {
   }
 }
 
-const user = (state = null) => state
+const user = (state = null, action) => {
+  switch (action.type) {
+    case "SET_USER":
+      return action.value
+    default:
+      return state
+  }
+}
 
 const listings = (state = [], action) => {
   switch (action.type) {

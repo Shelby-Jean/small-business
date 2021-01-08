@@ -17,10 +17,11 @@ const Login = (props) => {
   }
 
   const login = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    const user = {username, password}
     document.cookie = "loggedIn=true;max-age=60*1000";
-    // window.location.replace("/listings")
     props.logIn();
+    props.setUser(user);
     history.push("/listings");
   }
   
