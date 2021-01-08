@@ -1,4 +1,6 @@
 import { Table, TableHead, TableBody, TableRow, TableCell, Container } from '@material-ui/core';
+import { Delete } from '@material-ui/icons';
+import { pink } from '@material-ui/core/colors';
 import { Link } from 'react-router-dom';
 
 const Listings = (props) => {
@@ -12,6 +14,9 @@ const Listings = (props) => {
               <TableCell>Description</TableCell>
               <TableCell>Hours</TableCell>
               <TableCell>Address</TableCell>
+              {props.isLoggedIn ? 
+                  <TableCell>Delete</TableCell>
+                : null}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -23,6 +28,9 @@ const Listings = (props) => {
                 <TableCell>{listing.description}</TableCell>
                 <TableCell>{listing.hours}</TableCell>
                 <TableCell>{listing.address}</TableCell>
+                {props.isLoggedIn ? 
+                  <TableCell><Delete style={{color: pink}}/></TableCell>
+                : null}
               </TableRow>
             ))}
           </TableBody>

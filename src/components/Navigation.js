@@ -1,7 +1,15 @@
 import { AppBar, Toolbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+const Navigation = (props) => {
+
+  const logInOut = () => {
+    window.location.replace("/login")
+    if(props.isLoggedIn){
+      document.cookie = "loggedIn=";
+    }
+  }
+
   return (
     <AppBar color="primary" position="relative">
       <Toolbar color="contrastText">
@@ -10,13 +18,13 @@ const Navigation = () => {
           <li className="nav-item">
             <Link to="/listings">Listings</Link>
           </li>
-          <li className="nav-item"
-              onClick={() => {
-                document.cookie = "loggedIn="
-                window.location.replace("/login")
-              }}>
-              Logout
-          </li>
+          {props.isLoggedIn ? 
+            <li className="nav-item">
+              <Link to="/add">Add</Link>
+            </li>
+            : null
+          }
+          <li className="nav-item" onClick={logInOut}>{props.isLoggedIn ? "Logout" : "Login"}</li>
         </ul>
       </Toolbar>
     </AppBar>
