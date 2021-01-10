@@ -17,6 +17,14 @@ a {
   cursor: pointer;
 }
 
+.user-banner {
+  background-color: lightgrey;
+  color: grey;
+  font-size: 12px;
+  margin: 0;
+  padding: 5px 20px;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;

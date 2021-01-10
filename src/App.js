@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import './App.css';
 
-function App() {
+const App = (props) => {
   return (
     <Provider store={store}>
       <BrowserRouter>
