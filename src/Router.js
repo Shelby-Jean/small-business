@@ -3,7 +3,7 @@ import cookie from 'cookie';
 import Login from './containers/Login';
 import Listings from './containers/Listings';
 import Details from './containers/Details';
-import Add from './components/Add';
+import Add from './containers/Add';
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);

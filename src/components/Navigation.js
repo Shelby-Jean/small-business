@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navigation = (props) => {
 
   const logInOut = () => {
-    window.location.replace("/login")
+    window.location.replace("/login");
     if(props.isLoggedIn){
       document.cookie = "loggedIn=";
     }
