@@ -37,3 +37,7 @@ a {
   flex-direction: column;
   margin-top: 50px;
 }
+
+.listings-container {
+  margin-top: 50px;
+}

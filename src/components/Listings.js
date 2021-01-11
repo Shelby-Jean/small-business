@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 const Listings = (props) => {
   return (
     <div>
-      <Container>
+      <Container maxWidth="lg" className="listings-container">
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Description</TableCell>
-              <TableCell>Hours</TableCell>
-              <TableCell>Address</TableCell>
+              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Name</TableCell>
+              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Description</TableCell>
+              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Hours</TableCell>
+              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Address</TableCell>
               {props.isLoggedIn ? 
                   <TableCell>Delete</TableCell>
                 : null}
@@ -22,7 +22,7 @@ const Listings = (props) => {
           <TableBody>
             {props.listings.map(listing => (
               <TableRow key={listing.id}>
-                <TableCell>
+                <TableCell style={{ textDecoration: "underline" }}>
                   <Link to={`/details/${listing.id}`}>{listing.name}</Link>
                 </TableCell>
                 <TableCell>{listing.description}</TableCell>
