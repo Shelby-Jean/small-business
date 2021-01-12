@@ -1,6 +1,7 @@
 import React from 'react';
 import {v4 as uuid} from 'uuid';
 import { Container, TextField, Button } from '@material-ui/core';
+// import GoogleMap from './GoogleMap';
 
 class Add extends React.Component {
   state = {
@@ -62,7 +63,7 @@ class Add extends React.Component {
             </form>
           </Container>
           <Container maxWidth="sm">
-            {/* google maps placeholder */}
+            {/* <GoogleMap /> */}
           </Container>
         </Container>
       </div>

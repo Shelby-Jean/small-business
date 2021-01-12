@@ -42,6 +42,7 @@ export default {
     }
   ],
   map: {
-
+    lat: 35.2225,
+    lng: 80.8410
   }
 };

@@ -24,9 +24,9 @@ export const addListing = (listing) => {
   }
 }
 
-export const removeListing = (index) => {
+export const removeListing = (id) => {
   return {
     type: "REMOVE_LISTING",
-    value: index
+    value: id
   }
 }

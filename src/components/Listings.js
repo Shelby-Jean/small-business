@@ -1,21 +1,32 @@
 import { Table, TableHead, TableBody, TableRow, TableCell, Container } from '@material-ui/core';
 import { Delete } from '@material-ui/icons';
 import { pink } from '@material-ui/core/colors';
+import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 const Listings = (props) => {
+  const useStyles = makeStyles({
+    tableheader: {
+      fontSize: "12px", 
+      color: "grey", 
+      fontWeight: "bold"    
+    }
+  });
+
+  const classes = useStyles();
+
   return (
     <div>
       <Container maxWidth="lg" className="listings-container">
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Name</TableCell>
-              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Description</TableCell>
-              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Hours</TableCell>
-              <TableCell style={{ fontSize: "12px", color: "grey", fontWeight: "bold" }}>Address</TableCell>
+              <TableCell className={classes.tableheader}>Name</TableCell>
+              <TableCell className={classes.tableheader}>Description</TableCell>
+              <TableCell className={classes.tableheader}>Hours</TableCell>
+              <TableCell className={classes.tableheader}>Address</TableCell>
               {props.isLoggedIn ? 
-                  <TableCell>Delete</TableCell>
+                  <TableCell className={classes.tableheader}>Delete</TableCell>
                 : null}
             </TableRow>
           </TableHead>
@@ -29,7 +40,7 @@ const Listings = (props) => {
                 <TableCell>{listing.hours}</TableCell>
                 <TableCell>{listing.address}</TableCell>
                 {props.isLoggedIn ? 
-                  <TableCell><Delete style={{ color: pink[500] }} /></TableCell>
+                  <TableCell><Delete onClick={() => props.removeListing(listing.id)} style={{ color: pink[500] }} /></TableCell>
                 : null}
               </TableRow>
             ))}

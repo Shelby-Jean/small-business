@@ -26,8 +26,8 @@ const listings = (state = [], action) => {
       return [...state, action.value];
     case "REMOVE_LISTING":
       const newState = [...state];
-      newState.splice(action.value, 1);
-      return newState;
+      const filteredState = newState.filter(listing => listing.id !== action.value);
+      return filteredState;
     default:
       return state;
   }
