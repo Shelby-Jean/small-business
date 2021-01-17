@@ -1,9 +1,9 @@
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { pink } from '@material-ui/core/colors';
 
-const LocationPin = ({ text }) => (
+const LocationPin = () => (
   <div>
-    <LocationOnIcon />
-    <p style={{margin: 0}}>{text}</p>
+    <LocationOnIcon style={{color: pink[500]}}/>
   </div>
 )
 

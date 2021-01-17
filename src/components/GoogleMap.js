@@ -14,7 +14,6 @@ class GoogleMap extends React.Component {
         <LocationPin
           lat={this.props.latt}
           lng={this.props.long}
-          text={this.props.listingName}
         />
       </GoogleMapReact>
     </div>
