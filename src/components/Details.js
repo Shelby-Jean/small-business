@@ -29,7 +29,7 @@ const Details = (props) => {
         <h4>{filteredListing.address}</h4>
         <h4>{filteredListing.hours}</h4>
         <p>{filteredListing.description}</p>
-        <GoogleMap latt={latt} long={long} />
+        <GoogleMap latt={latt} long={long} listingName={filteredListing.name} />
       </Container>
     </div>
   )

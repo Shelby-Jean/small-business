@@ -1,6 +1,6 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from './Marker';
+import LocationPin from './LocationPin';
  
 class GoogleMap extends React.Component {
   render() {
@@ -11,9 +11,10 @@ class GoogleMap extends React.Component {
         defaultCenter={{lat: this.props.latt, lng: this.props.long}}
         defaultZoom={11}
       >
-        <Marker
+        <LocationPin
           lat={this.props.latt}
           lng={this.props.long}
+          text={this.props.listingName}
         />
       </GoogleMapReact>
     </div>
