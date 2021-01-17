@@ -17,7 +17,7 @@ export default {
       "name": "Rhino Market and Deli Southend",
       "description": "We are a neighborhood market and deli that fulfills the various needs of  urban foragers like you! We strive to give our customers the best service possible and provide a relaxing and fun environment for everyone.",
       "hours": "9AM - 7PM",
-      "address": "414 S Tryon St, Charlotte, NC 28203"
+      "address": "1414 S Tryon St, Charlotte, NC 28203"
     },
     {
       "id": 3,

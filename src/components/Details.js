@@ -4,14 +4,23 @@ import GoogleMap from '../components/GoogleMap';
 
 const Details = (props) => {
   const id = props.match.params.id;
-  const filteredListing = props.listings.find(listing => listing.id == id);
+  const filteredListing = props.listings.find(listing => listing.id.toString() === id);
 
-  const [lat, setLat] = useState(35.227200);
-  const [lng, setLng] = useState(-80.846100);
-  //useState with lat and lng, set with response
+  const [latt, setLatt] = useState(35.227200);
+  const [long, setLong] = useState(-80.846100);
 
-  //convert address to coordinates
-  //useEffect to make async call to GM API with address
+  useEffect(() => {
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${filteredListing.address}&key=${process.env.REACT_APP_MAP_API_KEY}`)
+      .then(response => response.json())
+      .then(data => {
+        // console.log(data);
+        setLatt(data.results[0].geometry.location.lat);
+        setLong(data.results[0].geometry.location.lng);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  });
 
   return (
     <div>
@@ -20,7 +29,7 @@ const Details = (props) => {
         <h4>{filteredListing.address}</h4>
         <h4>{filteredListing.hours}</h4>
         <p>{filteredListing.description}</p>
-        <GoogleMap lat={lat} lng={lng} />
+        <GoogleMap latt={latt} long={long} />
       </Container>
     </div>
   )

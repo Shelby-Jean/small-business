@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import {v4 as uuid} from 'uuid';
 import { Container, TextField, Button } from '@material-ui/core';
-// import GoogleMap from './GoogleMap';
 
 const Add = (props) => {
   const [id, setId] = useState(0);
@@ -24,8 +23,7 @@ const Add = (props) => {
 
   return (
     <div>
-      <Container maxWidth="lg" style={{display: "flex"}}>
-        <Container maxWidth="sm">
+      <Container maxWidth="sm">
           <form className="add-form" onSubmit={handleSubmit}>
             <TextField 
               placeholder="Name" 
@@ -58,10 +56,6 @@ const Add = (props) => {
             <Button variant="contained" color="secondary" type="submit">SAVE</Button>
           </form>
         </Container>
-        <Container maxWidth="sm">
-          {/* <GoogleMap /> */}
-        </Container>
-      </Container>
     </div>
   )
 }
