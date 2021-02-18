@@ -27,7 +27,8 @@ const Add = (props) => {
           <form className="add-form" onSubmit={handleSubmit}>
             <TextField 
               placeholder="Name" 
-              type="text" name="name" 
+              type="text" 
+              name="name" 
               value={newListing.name} 
               onChange={handleTextChange} 
             />
