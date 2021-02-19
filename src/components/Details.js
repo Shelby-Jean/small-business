@@ -13,7 +13,6 @@ const Details = (props) => {
     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${filteredListing.address}&key=${process.env.REACT_APP_MAP_API_KEY}`)
       .then(response => response.json())
       .then(data => {
-        // console.log(data);
         setLatt(data.results[0].geometry.location.lat);
         setLong(data.results[0].geometry.location.lng);
       })
