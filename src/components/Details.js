@@ -10,7 +10,6 @@ const Details = (props) => {
   const [long, setLong] = useState(-80.846100);
 
   useEffect(() => {
-    console.log(process.env);
     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${filteredListing.address}&key=${process.env.REACT_APP_MAP_API_KEY}`)
       .then(response => response.json())
       .then(data => {
