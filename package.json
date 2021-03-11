@@ -1,5 +1,6 @@
 {
   "name": "small-business",
+  "homepage": "https://clt-small-business-app.herokuapp.com/login",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
